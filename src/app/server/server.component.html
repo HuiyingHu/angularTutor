@@ -60,83 +60,91 @@
           私房菜
       </h1>
 
-      <div class="container row">
+      <div class="container col">
 
-        <div class="col">
+        <div class="row">
           <div class="w-75">
             <p>肉类</p>
             <hr>
           </div>
 
-          <div *ngFor="let meat of meats" class="row">
-            <div class="card border forPos scoll">
-              <img src={{meat.srcImg}} class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ meat.name }}</h5>
-                <button type="button" (click)="addIngred(meat.name)" class="btn btn-primary">Add</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
           <div class="w-75">
             <p>蔬菜</p>
             <hr>
           </div>
 
-          <div *ngFor="let veg of vegs" class="row ">
-            <div class="card border forPos">
-              <img src={{veg.srcImg}} class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ veg.name }}</h5>
-                <button type="button" (click)="addIngred(veg.name)" class="btn btn-primary">Add</button>
-              </div>
-            </div>
+          <div>
+            <p>菜篮</p>
+            <hr>
           </div>
         </div>
 
+        <div class="container row">
+
+          <div class="col">
 
 
-        <div class="row">
-          <div class="w-75">
-            <p>菜篮</p>
-            <hr>
+            <div *ngFor="let meat of meats" class="row">
+              <div class="card border forPos">
+                <img src={{meat.srcimg}} class="card-img-top" height="50%" width="100%" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ meat.name }}</h5>
+                  <button type="button" (click)="addIngred(meat.name)" class="btn btn-primary">Add</button>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="col">
 
-            <div *ngIf="bucket[0].meats.length !== 0">
-              <div *ngFor="let meat of bucket[0].meats" class="row ">
-                <div class="border forPos">
-                  <h5>{{ meat}}</h5>
-                  <button type="button" (click)="delIngred(meat)" class="btn btn-primary">Remove</button>
+
+            <div *ngFor="let veg of vegs" class="row ">
+              <div class="card border forPos">
+                <img src={{veg.srcimg}} class="card-img-top" height="50%" width="100%" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ veg.name }}</h5>
+                  <button type="button" (click)="addIngred(veg.name)" class="btn btn-primary">Add</button>
                 </div>
               </div>
             </div>
-
-            <div *ngIf="bucket[0].vegs.length !== 0">
-              <div *ngFor="let veg of bucket[0].vegs" class="row ">
-                <div class="border forPos">
-                  <h5>{{ veg }}</h5>
-                  <button type="button" (click)="delIngred(veg)" class="btn btn-primary">Remove</button>
-                </div>
-              </div>
-            </div>
-
-
           </div>
+
+
+
+          <div class="col bucket">
+
+
+
+            <div *ngIf="bucket[0].ingreds.length !== 0">
+              <div *ngFor="let ingred of bucket[0].ingreds" class="row ">
+                <div class="border forPos">
+                  <h5>{{ ingred}}</h5>
+                  <button type="button" (click)="delIngred(ingred)" class="btn btn-primary">Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
 
 
         </div>
 
+        <div class="container row">
+
+          <div class="card border forPos">
+            <img src={{dishsrc}} class="card-img-top" height="50%" width="100%" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ result}}</h5>
+              <button type="button" (click)="getCooked()" class="btn btn-primary">Cook</button>
+              <button type="button" (click)="reset()" class="btn btn-primary">Reset</button>
 
 
-
-
-
-
+            </div>
+          </div>
+        </div>
       </div>
+
+
     </div>
   </main>
 </div>
