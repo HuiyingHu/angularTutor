@@ -1,8 +1,69 @@
-.informBoxBoarder{
-  border-bottom: solid 2px;
-  border-left: solid 2px;
-  border-right: solid 2px;
-  border-top: solid 2px;
-  width: 300px;
-  border-color: cornflowerblue;
+/*.informBoxBoarder{*/
+/*  border-bottom: solid 2px;*/
+/*  border-left: solid 2px;*/
+/*  border-right: solid 2px;*/
+/*  border-top: solid 2px;*/
+/*  width: 300px;*/
+/*  border-color: cornflowerblue;*/
+/*}*/
+
+
+#wrapwarp {
+  background-size: cover;
+  background-position: center;
 }
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.border {
+  border: 1px black solid;
+}
+
+.ingredient {
+  display: inline-block;
+}
+
+.forPos {
+  width: 10rem;
+  margin: 10px;
+}
+
+/*.scoll {*/
+/*  data-spy: "scroll";*/
+/*  data-target: "#navbar-example2";*/
+/*  data-offset:"0";*/
+/*}*/
+
+/*.hlimit {*/
+/*  max-height: 100px;*/
+/*}*/
+
+
